@@ -1,0 +1,176 @@
+.chat {
+  flex: 2;
+
+  border-left: 1px solid white;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .top {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+
+    .user {
+      display: flex;
+      gap: 20px;
+
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .texts {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      span {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 300;
+        color: #a5a5a5;
+      }
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .center {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    -ms-overflow-style: none;
+    scrollbar-color: rgba(17, 25, 40, 1) rgba(17, 25, 40, 0.5);
+
+    .message {
+      max-width: 70%;
+      display: flex;
+      gap: 20px;
+      
+
+      &.own {
+        align-self: flex-end;
+
+        .texts {
+          p {
+            background-color: #5183fe;
+
+          
+          }
+
+         
+        }
+      }
+
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .texts {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap:5px;
+
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+             object-fit: cover;
+          }
+
+        p{
+            padding: 20px;
+            background-color: rgba(17,25,40,0.3);
+            border-radius: 10px;
+        }
+
+        span{
+            font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid gainsboro;
+
+    .icons {
+      display: flex;
+      gap: 20px;
+
+      img {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+    }
+
+    input {
+      flex: 1;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      background-color: rgba(17, 25, 40, 0.5);
+      padding: 20px;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+
+    .emoji {
+      position: relative;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .picker {
+        position: absolute;
+        bottom: 50px;
+      }
+    }
+
+    .sendButton {
+      background-color: #5183fe;
+      color: white;
+      border: 0;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
